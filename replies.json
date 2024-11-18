@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "text": "Bienvenido al sitio web oficial de ChoChoX App, lamentablemente el sitio sigue en construccion.",
+    "paths": [
+      { "target": 1, "text": "¿Cuanto tardaran en hacer el sitio y la app?" },
+      { "target": 2, "text": "¿Por que su sitio parece una PC? XD" },
+      { "target": 3, "text": "Soy VCP ¿Por que te robas mis comics?" },
+      { "target": 4, "text": "¿Como puedo contactarme con 'ustedes'?" },
+      { "target": 5, "text": "¿Habran mas respuestas a preguntas aqui, mientras se desarrolla la app y el sitio?" }     
+    ]
+  },
+  {
+    "id": 1,
+    "text": "Se estimaba que en enero de 2025, pero debido a algunos inconvenientes puede que se tarde mas."
+  },
+  {
+    "id": 2,
+    "text": "Me parecio una idea interesante."
+  },
+  {
+    "id": 3,
+    "text": "Entiendo tu frustracion, si es que no estas mintiendo y SI eres VCP. La verdad yo no me encargo de eso, y si fuera por mi, ChoChoX seria un lugar de rosas donde todos somos amiguis, algo cursi, pero soy alguien al que no le gusta el conflicto."
+  },
+  {
+    "id": 4,
+    "text": "Para contactarte con nosotros puedes mandarnos un mail a 'info@chochox.ct.ws' o llenar el formulario de a continuacion:",
+    "html":  "<form action='https://formsubmit.co/Noctrow.Oficial@gmail.com' method='POST'><label for='name'>Tu nombre:</label><input type='text' id='name' name='name' required><br><label for='email'>Tu email</label><input type='email' id='email' name='email' required><br><label for='message'>Tu mensaje:</label><textarea id='message' name='message' required></textarea><button type='submit'>Enviar</button></form>"
+  }, 
+  {
+    "id": 5, 
+    "text": "Si, habra mucho mas que eso, cuando el sitio se termine de desarrollar esto seguira activo en 'wiki.chochox.ct.ws', mientras tanto esto reemplazara lo que seria el sitio web de inicio de la app y sera un lugar donde podras encontrar respuestas a preguntas y algunos easter eggs. Se actualizara al menos una vez por semana (Todos los Lunes)."
+  }
+]

@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Retro';
+  src: url('fonts/retro.ttf') format('truetype');
+}
+
+/* Fondo oscuro con animaciones sombrías */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #00bb00;
+  font-family: "Retro", monospace;
+  overflow: view;
+}
+
+/* Animación sombría */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 80%);
+  z-index: -1;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 1) 80%);
+  }
+  50% {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 80%);
+  }
+}
+
+/* Contenido principal */
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  color: #f2f251;
+  font-size: 2em;
+  margin-bottom: 50px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0px 0px 5px rgba(242, 242, 81, 0.6);
+  }
+  50% {
+    text-shadow: 0px 0px 15px rgba(242, 242, 81, 1);
+  }
+}
+
+/* Texto de la respuesta*/
+.replie-text {
+  margin-top: 30px;
+  font-size: 1em;
+  color: #00bb00;
+}
+
+/* Botones de preguntas */
+.path-btn {
+  font-family: "Retro", monospace;
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 10px 20px;
+  font-size: 0.8em;
+  color: #f2f251;
+  background: none;
+  border: 2px solid #f2f251;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: glow 2s infinite;
+}
+
+.path-btn:hover {
+  background-color: #f2f251;
+  color: #000;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(242, 242, 81, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(242, 242, 81, 1);
+  }
+}
+
+/* Imágenes de la respuesta */
+.replie-img {
+  max-width: 80%;
+  margin: 20px auto;
+  display: block;
+  border: 5px solid #00bb00;
+  border-radius: 10px;
+}
+
+/* Cursor animado para el efecto de escritura */
+.replie-text::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #00bb00;
+  animation: blink 0.5s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+/* Efecto CRT: líneas horizontales */
+.overlay:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 2px,
+    rgba(0, 0, 0, 0.05) 4px
+  );
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Efecto de parpadeo leve para texto */
+.flicker-text {
+  animation: flicker-text 1.5s infinite;
+}
+
+@keyframes flicker-text {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Contenedor retro adicional */
+.retro-container {
+  border: 3px solid #00bb00;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+  background-color: #000;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo del formulario */
+input, textarea {
+  font-family: "Retro", monospace;
+  background-color: #000;
+  color: #00bb00;
+  border: 2px solid #00bb00;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  background-color: #00bb00;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #f2f251;
+  color: black;
+}
+
+/* Efecto glitch */
+#html-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#html-container > * {
+  opacity: 0;
+  filter: blur(5px);
+  transition: opacity 0.5s, filter 0.5s;
+}
+
+/* Contenedor estático */
+#static-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/static.gif') repeat;
+  z-index: 9999;
+  opacity: 0.8;
+  pointer-events: none;
+}
